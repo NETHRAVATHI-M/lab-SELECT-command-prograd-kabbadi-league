@@ -72,6 +72,9 @@ select  EVENT_NO, DEFENDING_POINTS from event where NAME='Fazel Atrachali' order
 -- 19. **Write a query to display the names of the Winning teams in the month of March 2020. Display the records sorted in ascending order based on team name.**
 insert into game values(49,to_date ( '2020-03-17', ' yyyy-mm-dd'),22,23,54,34,4,5,2,3);
 SELECT NAME FROM PLAYER
+SELECT * FROM SKILL;
+insert into skill(ID,NAME)VALUES(1,'All Rounder')
+insert into skill(ID,NAME)VALUES(2),'Batting' )
 WHERE ID IN(SELECT WINNER_TEAM_ID FROM OUTCOME WHERE ID IN(SELECT ID FROM GAME WHERE GAME_DATE='17/MAR/2020')) ORDER BY NAME ASC;
 -- 20. **Write a query to display the names of players who were the player of the match in the games held in March 2020. Display the records sorted in ascending order based on player name.**
 SELECT NAME FROM PLAYER,OUTCOME,GAME WHERE GAME_DATE BETWEEN TO_DATE('01-MAR-2020', 'DD-MM-YYYY') AND '31-MAR-2020' ORDER BY NAME ASC;
